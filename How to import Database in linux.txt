@@ -1,0 +1,25 @@
+Step 1 > Conncet mysql
+
+mysql -u root1 -p -S /var/run/mysqld/mysqld.sock
+
+Step 2 > Select database
+ 
+use Databasename 
+
+Ex . use test
+
+
+Step 3 > Import Databse by defining fullpath
+
+source file path to the .sql
+
+Ex .source /var/www/html/arbanah-magento/arbanah_horseco.sql
+
+
+nameserver 127.0.0.53
+
+source Downloads/curlnationkw-24012023.sql
+
+curlnationkw-03022023
+
+source Downloads/curlnationkw-13022023.sql

@@ -1,0 +1,42 @@
+For Magento base urls Change Isssue
+
+----> First Go to Phpmyadmin Database
+  ------> Second go to core_config_data Tables
+  ----> Search the web/secure/base_url 
+     ----> Change the url 
+     
+*********************************************************     
+     
+For any Reason custom css file will does not call then 
+
+-----> Check to pub/static/frontend 
+--------> where generate the custom css file 
+-----------> all the Generated File are in the pub/static/frontend/css
+-------------> If we want to load css file without to deploy command the write css into custom theme css and write in pub/static/frontent/css
+
+*********************************************************
+For permission Command 
+
+---> chmod -R 777 pub/static/* pub/* var/cache/* var/*
+
+*******************************************************
+
+Error Css Not Loading Quaery
+
+INSERT INTO core_config_data (path, value) VALUES ('dev/static/sign', 0)
+ON DUPLICATE KEY UPDATE value = 0;
+
+*****************************************************
+Error for phpmyadmin 500 Internal Error 
+
+=> sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+=> sudo a2enconf phpmyadmin
+=> sudo service apache2 reload
+
+*********************************************************
+
+Database import and export commad form terminal 
+
+mysql -h localhost -u kwghhaefsd -pZvFtUhCBQ2 kwghhaefsd < db.sql
+
+mysqldump -h localhost -u kwghhaefsd -pZvFtUhCBQ2 kwghhaefsd > db.sql

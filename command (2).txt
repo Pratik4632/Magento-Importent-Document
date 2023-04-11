@@ -230,4 +230,4 @@ Share Commands
 
 INSERT INTO `core_config_data` (`scope`, `scope_id`, `path`, `value`) VALUES ('default', 0, 'web/cookie/cookie_domain', 'http://127.0.0.1/curlnation/pub/');
 
-si
+

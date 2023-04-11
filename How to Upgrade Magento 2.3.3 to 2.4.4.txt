@@ -1,0 +1,21 @@
+Step 1 >> Check your Composer Version, Using Composer Command , If your composer version is 2 than downgrade composer to version 1 using this command >> composer self-update --1
+Step 2 >> composer require magento/composer-root-update-plugin=~1.0 --no-update
+Step 3 >> composer update
+If you are getting composer memory limit error than run this command >>php -d 	 C:\ProgramData\ComposerSetup\bin\composer.phar
+or
+php -dmemory_limit=5G C:\ProgramData\ComposerSetup\bin\composer.phar update
+
+Step 4 >> composer require magento/product-community-edition=2.4.4 --no-update
+
+
+composer require klarna/module-core:*
+
+$realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
+
+
+// Error >> Type Error occurred when creating object: Magento\Framework\Communication\Config\Data, Argument 2 passed to Magento\Framework\Reflection\TypeProcessor::resolveFullyQualifiedClassName() must be of the type string, null given, called in E:\wamp64\www\magento233\vendor\magento\framework\Reflection\TypeProcessor.php on line 550
+
+Temporary Solution >> Or if you dont care to fix the modules now You can change line 550 of vendor/magento/framework/Reflection/TypeProcessor.php to "return $type;"
+
+
+php -dmemory_limit=5G C:\ProgramData\ComposerSetup\bin\composer.phar update laminas/laminas-dependency-plugin magento/composer-root-update-plugin

@@ -1,0 +1,32 @@
+Step 1 > Import Database
+Step 2 > Clone Github Repo
+     Errror > If permission issue showing > than give 777 permission to the folder in local
+Step 3 > after cloning github copy config.php and env.php in app/etc/ folder
+Step 4 > change in composer.json file in the root of project
+	"repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ]
+    
+Step 5 > run this command > composer install --ignore-platform-reqs
+
+
+Step 5 > run this command > composer require mageplaza/module-core
+
+Step 6 > chagne base_url,media url, static url from core_config_data table
+
+
+Deprecated Functionality: trim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/arbabah-magento/vendor/mgtcommerce/module-mgtdevelopertoolbar/src/app/code/Mgt/DeveloperToolbar/Model/Config.php on line 77
+
+Solution > replace the line number 77 with > 
+$allowedIps = trim($this->scopeConfig->getValue('mgt_developer_toolbar/module/allowed_ip') ?? '');
+
+
+// composer
+
+// Composer
+Use the Public key as your username and the Private key as your password.
+Public Key: e042610264e17ebe7f5e7c25a6f44732
+Private Key: 925c984b853aefaa4b12506b553091c6

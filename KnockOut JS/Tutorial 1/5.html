@@ -1,0 +1,32 @@
+<!-- Obeservable Array -->
+<script src="../knockout-3.5.1.js"></script>
+
+<ul data-bind="foreach:friends">
+    <li data-bind="text:name"></li>
+</ul>
+
+<ul data-bind="foreach:friendsGroup">
+    <li data-bind="text:name"></li>
+</ul>
+
+<script>
+
+    function Friend(name){
+        this.name = name;
+    }
+
+    var obj = {
+        firstname : ko.observable("Praduman"),
+        lastname : ko.observable("Pandey"),
+
+        // friends is a collection
+        friends : ko.observableArray([new Friend('Arun'), new Friend('Rahul'), new Friend('Parth'), new Friend('Ranjeet'), new Friend('Ritesh'), new Friend('Nirmal')]),
+
+        // when calling Friend function it just returning the object, above one is same as bellow one
+
+        friendsGroup : ko.observableArray([{ name: "Arun"},{ name: "Rahul"},{ name: "Parth"},{ name: "Rahul"},{ name: "Ritesh"},{ name: "Nirmal"},
+        ])
+    };
+
+    ko.applyBindings(obj);
+</script>
